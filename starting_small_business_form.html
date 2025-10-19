@@ -142,6 +142,28 @@
           <label class="block text-sm font-medium text-gray-700">My business idea fits best as a...</label>
           <input name="bestFit" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="Type here"/>
         </div>
+        <div class="mt-4">
+          <label class="block text-sm font-medium text-gray-700">Side Hustle Type</label>
+          <select name="sideHustle" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3">
+            <option value="None">None</option>
+            <option value="Freelance Writing">Freelance Writing</option>
+            <option value="Uber Driving">Uber Driving</option>
+            <option value="Tutoring">Tutoring</option>
+            <option value="Selling on Etsy">Selling on Etsy</option>
+            <option value="Dog Walking">Dog Walking</option>
+            <option value="Graphic Design">Graphic Design</option>
+            <option value="Photography">Photography</option>
+            <option value="AI Content Generation">AI Content Generation</option>
+            <option value="AI Art Creation">AI Art Creation</option>
+            <option value="AI Consulting">AI Consulting</option>
+            <option value="Blogging">Blogging</option>
+            <option value="Affiliate Marketing">Affiliate Marketing</option>
+            <option value="Dropshipping">Dropshipping</option>
+            <option value="Social Media Influencer">Social Media Influencer</option>
+            <option value="Social Media Management">Social Media Management</option>
+            <option value="YouTube Content Creation">YouTube Content Creation</option>
+          </select>
+        </div>
       </section>
 
       <!-- Part 3 -->
@@ -272,6 +294,7 @@
       lines.push('[Part 2] Type of Business');
       lines.push('Checked Types: ' + (types.length ? types.join(', ') : ''));
       lines.push('Best Fit: ' + (data.get('bestFit')||''));
+      lines.push('Side Hustle: ' + (data.get('sideHustle')||''));
       lines.push('');
 
       lines.push('[Part 3] Purpose & Audience');
