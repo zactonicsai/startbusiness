@@ -6,12 +6,10 @@
   <title>Starting Your Small Business — Interactive Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Simple gradient background */
     body { background: linear-gradient(135deg, #e0f2fe, #f5f3ff); }
   </style>
 </head>
 <body class="min-h-screen p-6 sm:p-10">
-  <!-- NAVBAR -->
   <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
@@ -20,49 +18,25 @@
           <span class="font-semibold text-lg">Start Smart</span>
         </a>
         <nav class="hidden md:flex items-center gap-6">
-          <a href="/starting_small_business_form.html" class="hover:text-blue-700">First Things First</a>
-          <a href="/market_research.html" class="hover:text-blue-700">Market & Competition</a>
-          <a href="/business_plan.html" class="hover:text-blue-700">Business Plan</a>
-          <a href="/index.html/#costs" class="hover:text-blue-700">Startup Costs</a>
-          <a href="/index.html/#credit" class="hover:text-blue-700">Business Credit</a>
-          <a href="/index.html/#funding" class="hover:text-blue-700">Funding</a>
-          <a href="/index.html/#buy" class="hover:text-blue-700">Buy/Franchise</a>
+          <a href="#" class="hover:text-blue-700">First Things First</a>
+          <a href="#" class="hover:text-blue-700">Market & Competition</a>
+          <a href="#" class="hover:text-blue-700">Business Plan</a>
         </nav>
-        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-slate-100" aria-label="Open Menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 6h18M3 12h18M3 18h18"/>
-          </svg>
-        </button>
       </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
-      <nav class="mx-auto max-w-7xl px-4 py-3 grid grid-cols-1 gap-2">
-         <a href="/starting_small_business_form.html" class="hover:text-blue-700">First Things First</a>
-        <a href="/market_research.html" class="hover:text-blue-700">Market & Competition</a>
-        <a href="/business_plan.html" class="py-2 hover:text-blue-700">Business Plan</a>
-        <a href="#costs" class="py-2 hover:text-blue-700">Startup Costs</a>
-        <a href="/index.html/#credit" class="py-2 hover:text-blue-700">Business Credit</a>
-        <a href="/index.html/#funding" class="py-2 hover:text-blue-700">Funding</a>
-        <a href="/index.html/#buy" class="py-2 hover:text-blue-700">Buy/Franchise</a>
-      </nav>
     </div>
   </header>
 
-  
-
   <div class="max-w-5xl mx-auto">
     <header class="bg-blue-700 text-white rounded-2xl shadow-lg p-6 sm:p-8 mb-6">
-      <h1 class="text-2xl sm:text-3xl font-extrabold">Starting Your Small Business — Beginner’s Worksheet</h1>
-      <p class="opacity-90 mt-2">Fill this out to shape your idea into a real plan. Download a text summary when you’re done.</p>
+      <h1 class="text-2xl sm:text-3xl font-extrabold">Starting Your Small Business — Beginner's Worksheet</h1>
+      <p class="opacity-90 mt-2">Fill this out to shape your idea into a real plan. Download a text summary when you're done.</p>
     </header>
 
     <form id="bizForm" class="space-y-8">
-      <!-- Intro fields -->
       <section class="grid sm:grid-cols-3 gap-4">
         <div>
           <label class="block text-sm font-medium text-gray-700">Instructor</label>
-          <input name="instructor" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3" placeholder="Your name"/>
+          <input name="instructor" value="Zach Lewis" disabled class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3" placeholder="Your name"/>
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Student Name</label>
@@ -74,17 +48,16 @@
         </div>
       </section>
 
-      <!-- Part 1 -->
       <section class="bg-white rounded-2xl shadow p-6">
         <h2 class="text-xl font-bold text-blue-800">Part 1 — Choosing Your Business Idea</h2>
-        <p class="text-sm text-gray-600 mb-4">Think about what you love, what you’re good at, and what people need.</p>
+        <p class="text-sm text-gray-600 mb-4">Think about what you love, what you're good at, and what people need.</p>
         <div class="grid sm:grid-cols-3 gap-4">
           <div>
             <label class="block text-sm font-medium text-gray-700">What I Enjoy Doing</label>
             <textarea name="enjoy" rows="5" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700">What I’m Good At</label>
+            <label class="block text-sm font-medium text-gray-700">What I'm Good At</label>
             <textarea name="goodAt" rows="5" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
           </div>
           <div>
@@ -96,12 +69,11 @@
           <p class="text-sm text-gray-700 font-semibold">Prompts</p>
           <ul class="list-disc list-inside text-sm text-gray-700">
             <li>What problems do you notice in your community or online that you could help solve?</li>
-            <li>What kind of products or services do you wish existed but don’t?</li>
+            <li>What kind of products or services do you wish existed but don't?</li>
           </ul>
         </div>
       </section>
 
-      <!-- Part 2 -->
       <section class="bg-white rounded-2xl shadow p-6">
         <h2 class="text-xl font-bold text-blue-800">Part 2 — Type of Business</h2>
         <p class="text-sm text-gray-600 mb-4">Check all that fit your idea, or select the best match.</p>
@@ -167,7 +139,6 @@
         </div>
       </section>
 
-      <!-- Part 3 -->
       <section class="bg-white rounded-2xl shadow p-6">
         <h2 class="text-xl font-bold text-blue-800">Part 3 — Purpose & Audience</h2>
         <div class="space-y-4">
@@ -186,7 +157,6 @@
         </div>
       </section>
 
-      <!-- Part 4 -->
       <section class="bg-white rounded-2xl shadow p-6">
         <h2 class="text-xl font-bold text-blue-800">Part 4 — Startup Snapshot</h2>
         <div class="space-y-4">
@@ -213,38 +183,22 @@
         </div>
       </section>
 
-      <!-- Part 5 -->
       <section class="bg-white rounded-2xl shadow p-6">
         <h2 class="text-xl font-bold text-blue-800">Part 5 — First 5 Steps to Launch</h2>
-        <div class="overflow-hidden rounded-xl border"><table class="w-full text-left" id="taskTable">
-  <thead class="bg-blue-100">
-    <tr>
-      <th class="p-3 w-16">Step</th>
-      <th class="p-3">Task</th>
-      <th class="p-3 w-40">Deadline</th>
-    </tr>
-  </thead>
-  <tbody id="taskTableBody">
-    <!-- Rows will be inserted here by JavaScript -->
-  </tbody>
-</table>
-
-<script>
-  // Generate the table rows dynamically
-  const tbody = document.getElementById('taskTableBody');
-  const rows = [1,2,3,4,5].map(i => `
-    <tr class="border-t">
-      <td class="p-3 font-semibold">${i}</td>
-      <td class="p-3"><input name="task${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
-      <td class="p-3"><input type="date" name="deadline${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
-    </tr>
-  `).join('');
-  tbody.innerHTML = rows;
-</script>
+        <div class="overflow-hidden rounded-xl border">
+          <table class="w-full text-left" id="taskTable">
+            <thead class="bg-blue-100">
+              <tr>
+                <th class="p-3 w-16">Step</th>
+                <th class="p-3">Task</th>
+                <th class="p-3 w-40">Deadline</th>
+              </tr>
+            </thead>
+            <tbody id="taskTableBody"></tbody>
+          </table>
         </div>
       </section>
 
-      <!-- Reflection -->
       <section class="bg-white rounded-2xl shadow p-6">
         <h2 class="text-xl font-bold text-blue-800">Reflection</h2>
         <div class="space-y-4">
@@ -271,122 +225,56 @@
 
     <footer class="mt-10 text-sm text-gray-600">
       <p>Tip: Validate your idea early — interview potential customers, run a small pilot, or pre-sell a simple version.</p>
- <hr class="text-3xl font-bold py-6"/>
-         <h1 class="text-3xl font-bold padding-top: 50px;"><a
-          href="https://www.theblackupstart.com/"
-          alt="https://www.theblackupstart.com/"
-          >The Black Upstart - They Train Black Entrepreneurs</a
-        ></h1>
-         <hr class="text-3xl font-bold py-2"/>
-        <div class="flex flex-col md:flex-row gap-4">
-          <div class="w-full md:w-1/2">
-            <div class="relative aspect-video">
-              <iframe
-                class="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/9NaYNDXQmvQ?si=b5wC-vM3lYM16RAi"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              >
-              </iframe>
-            </div>
-          </div>
-
-          <div class="w-full md:w-1/2">
-            <div class="relative aspect-video">
-              <iframe
-                class="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/PbQNL1DYlHo?si=6Kgte8eezPuZ3B06"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              >
-              </iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FIRST THINGS FIRST -->
-    <section id="first" class="scroll-mt-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
-        <div
-          class="rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-8 shadow-xl"
-        >
-          <div class="grid md:grid-cols-3 gap-8 items-center">
-            <div class="md:col-span-2">
-              <h2 class="text-2xl font-extrabold">First Things First</h2>
-              <p class="mt-2 text-blue-100">
-                This form will help you get started right — by clarifying your
-                idea, audience, costs, and first five steps.
-              </p>
-            </div>
-            <div class="flex md:justify-end">
-              <a
-                href="/starting_small_business_form.html"
-                class="inline-flex items-center gap-2 rounded-xl bg-white text-blue-800 px-5 py-3 font-semibold shadow hover:bg-blue-50"
-              >
-                Open the Form
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            </div>
     </footer>
   </div>
 
   <script>
+    // Generate table rows
+    const tbody = document.getElementById('taskTableBody');
+    const rows = [1,2,3,4,5].map(i => `
+      <tr class="border-t">
+        <td class="p-3 font-semibold">${i}</td>
+        <td class="p-3"><input name="task${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
+        <td class="p-3"><input type="date" name="deadline${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
+      </tr>
+    `).join('');
+    tbody.innerHTML = rows;
+
     function collectFormData(form) {
       const data = new FormData(form);
       const types = data.getAll('types');
       let lines = [];
       lines.push('Starting Your Small Business — Worksheet');
       lines.push('---------------------------------------');
-      lines.push('Instructor: ' + (data.get('instructor')||''));
-      lines.push('Student: ' + (data.get('student')||''));
-      lines.push('Date: ' + (data.get('date')||''));
+      lines.push('Instructor: ' + (data.get('instructor') || 'Zach Lewis'));
+      lines.push('Student: ' + (data.get('student') || ''));
+      lines.push('Date: ' + (data.get('date') || ''));
       lines.push('');
 
       lines.push('[Part 1] Choosing Your Business Idea');
-      lines.push('Enjoy: ' + (data.get('enjoy')||''));
-      lines.push('Good At: ' + (data.get('goodAt')||''));
-      lines.push('Help With: ' + (data.get('helpWith')||''));
+      lines.push('Enjoy: ' + (data.get('enjoy') || ''));
+      lines.push('Good At: ' + (data.get('goodAt') || ''));
+      lines.push('Help With: ' + (data.get('helpWith') || ''));
       lines.push('');
 
       lines.push('[Part 2] Type of Business');
       lines.push('Checked Types: ' + (types.length ? types.join(', ') : ''));
-      lines.push('Best Fit: ' + (data.get('bestFit')||''));
-      lines.push('Side Hustle: ' + (data.get('sideHustle')||''));
+      lines.push('Best Fit: ' + (data.get('bestFit') || ''));
+      lines.push('Side Hustle: ' + (data.get('sideHustle') || ''));
       lines.push('');
 
       lines.push('[Part 3] Purpose & Audience');
-      lines.push('Ideal Customer: ' + (data.get('idealCustomer')||''));
-      lines.push('Problem Solved: ' + (data.get('problemSolved')||''));
-      lines.push('Unique Value: ' + (data.get('uniqueValue')||''));
+      lines.push('Ideal Customer: ' + (data.get('idealCustomer') || ''));
+      lines.push('Problem Solved: ' + (data.get('problemSolved') || ''));
+      lines.push('Unique Value: ' + (data.get('uniqueValue') || ''));
       lines.push('');
 
       lines.push('[Part 4] Startup Snapshot');
-      lines.push('Materials/Tools: ' + (data.get('materials')||''));
-      lines.push('Budget: ' + (data.get('budget')||''));
-      lines.push('Channels: ' + (data.get('channels')||''));
-      lines.push('Team: ' + (data.get('team')||''));
-      lines.push('Brand Ideas: ' + (data.get('brand')||''));
+      lines.push('Materials/Tools: ' + (data.get('materials') || ''));
+      lines.push('Budget: ' + (data.get('budget') || ''));
+      lines.push('Channels: ' + (data.get('channels') || ''));
+      lines.push('Team: ' + (data.get('team') || ''));
+      lines.push('Brand Ideas: ' + (data.get('brand') || ''));
       lines.push('');
 
       lines.push('[Part 5] First 5 Steps');
@@ -396,9 +284,9 @@
       lines.push('');
 
       lines.push('[Reflection]');
-      lines.push('Excites: ' + (data.get('excites')||''));
-      lines.push('Fears: ' + (data.get('fears')||''));
-      lines.push('Motivation: ' + (data.get('motivation')||''));
+      lines.push('Excites: ' + (data.get('excites') || ''));
+      lines.push('Fears: ' + (data.get('fears') || ''));
+      lines.push('Motivation: ' + (data.get('motivation') || ''));
 
       return lines.join('\n');
     }
