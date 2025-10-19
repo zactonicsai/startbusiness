@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Business Plan — AI Prompt Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(900px 500px at 10% -10%, #e0f2fe 0%, transparent 60%),
+        radial-gradient(900px 500px at 90% -10%, #f5f3ff 0%, transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased">
+      <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold">SB</span>
+          <span class="font-semibold text-lg">Start Smart</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="/starting_small_business_form.html" class="hover:text-blue-700">First Things First</a>
+          <a href="/market_research.html" class="hover:text-blue-700">Market & Competition</a>
+          <a href="/business_plan.html" class="hover:text-blue-700">Business Plan</a>
+          <a href="/index.html/#costs" class="hover:text-blue-700">Startup Costs</a>
+          <a href="/index.html/#credit" class="hover:text-blue-700">Business Credit</a>
+          <a href="/index.html/#funding" class="hover:text-blue-700">Funding</a>
+          <a href="/index.html/#buy" class="hover:text-blue-700">Buy/Franchise</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-slate-100" aria-label="Open Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <nav class="mx-auto max-w-7xl px-4 py-3 grid grid-cols-1 gap-2">
+         <a href="/starting_small_business_form.html" class="hover:text-blue-700">First Things First</a>
+        <a href="/market_research.html" class="hover:text-blue-700">Market & Competition</a>
+        <a href="/business_plan.html" class="py-2 hover:text-blue-700">Business Plan</a>
+        <a href="#costs" class="py-2 hover:text-blue-700">Startup Costs</a>
+        <a href="/index.html/#credit" class="py-2 hover:text-blue-700">Business Credit</a>
+        <a href="/index.html/#funding" class="py-2 hover:text-blue-700">Funding</a>
+        <a href="/index.html/#buy" class="py-2 hover:text-blue-700">Buy/Franchise</a>
+      </nav>
+    </div>
+  </header>
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold">BP</span>
+        <span class="font-semibold">Business Plan Prompt Builder</span>
+      </div>
+      <a href="#how" class="text-sm font-medium text-blue-700 hover:underline">How it works</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
+    <!-- HERO -->
+    <section class="mb-8">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-fuchsia-600 p-1 shadow-xl">
+        <div class="rounded-3xl bg-white p-6 sm:p-8">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                Create a complete <span class="text-blue-700">Business Plan</span> prompt for your AI tool
+              </h1>
+              <p class="mt-3 text-slate-600">
+                Fill in the sections below. We’ll assemble a clean, structured prompt that your AI tool can turn into a professional business plan.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href="#form" class="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 font-semibold text-white shadow hover:bg-blue-800">
+                  Start the Form
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="rounded-2xl bg-slate-900 text-white p-6 shadow-lg">
+                <p class="text-sm opacity-80">Your prompt will include:</p>
+                <ul class="mt-2 text-sm space-y-1">
+                  <li>• Executive Summary & Mission</li>
+                  <li>• Market & Customer Segments</li>
+                  <li>• Problem, Solution, Offer</li>
+                  <li>• Competitors & SWOT</li>
+                  <li>• Marketing & Operations</li>
+                  <li>• Team, Milestones, Funding</li>
+                  <li>• Financials, KPIs, Risks</li>
+                </ul>
+                <p class="text-xs opacity-60 mt-4">Download as .txt or copy to clipboard.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section id="form" class="bg-white rounded-3xl shadow ring-1 ring-slate-200 p-6 sm:p-8">
+      <h2 class="text-xl font-bold text-blue-800">Business Plan — Inputs</h2>
+      <p class="text-sm text-slate-600 mb-6">You can leave sections blank—your AI will note assumptions.</p>
+
+      <!-- Basic Info -->
+      <div class="grid md:grid-cols-3 gap-4 mb-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="bizName">Business Name</label>
+          <input id="bizName" class="w-full rounded-xl border-slate-300 p-3" placeholder="e.g., River City Detail Co."/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="legal">Legal Structure</label>
+          <input id="legal" class="w-full rounded-xl border-slate-300 p-3" placeholder="LLC, Sole Prop, S-Corp, etc."/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="location">Location</label>
+          <input id="location" class="w-full rounded-xl border-slate-300 p-3" placeholder="City, State/Region"/>
+        </div>
+      </div>
+
+      <!-- Strategy Core -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="mission">Mission Statement</label>
+          <textarea id="mission" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Why you exist and who you serve."></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="valueProp">Value Proposition</label>
+          <textarea id="valueProp" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Unique benefit: what you do better/differently."></textarea>
+        </div>
+      </div>
+
+      <!-- Market & Customer -->
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="segments">Target Customer Segments</label>
+          <textarea id="segments" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Personas, demographics, B2B firmographics"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="problem">Customer Problem / Need</label>
+          <textarea id="problem" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Top pain points, jobs-to-be-done"></textarea>
+        </div>
+      </div>
+
+      <!-- Offer -->
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="offer">Products/Services (Offer)</label>
+          <textarea id="offer" rows="4" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Describe SKUs/packages, service tiers, delivery"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="pricing">Pricing Strategy</label>
+          <textarea id="pricing" rows="4" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Price points, tiers, discounts, subscriptions"></textarea>
+        </div>
+      </div>
+
+      <!-- Go-To-Market -->
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="channels">Sales/Distribution Channels</label>
+          <textarea id="channels" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Online, retail, direct, partnerships"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="marketing">Marketing Plan</label>
+          <textarea id="marketing" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="SEO, social, ads, email, local events"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="kpis">KPIs</label>
+          <textarea id="kpis" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="CAC, LTV, conversion, MRR, retention, NPS"></textarea>
+        </div>
+      </div>
+
+      <!-- Competitors & SWOT -->
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="competitors">Competitors</label>
+          <textarea id="competitors" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Names/URLs, quick notes on positioning"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="swot">SWOT (optional)</label>
+          <textarea id="swot" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Strengths, Weaknesses, Opportunities, Threats"></textarea>
+        </div>
+      </div>
+
+      <!-- Operations & Team -->
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="operations">Operations</label>
+          <textarea id="operations" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Suppliers, production, fulfillment, customer service"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="team">Team</label>
+          <textarea id="team" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Founders, roles, advisors, hiring plan"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="milestones">Milestones (12–18 months)</label>
+          <textarea id="milestones" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Launch dates, revenue targets, product releases"></textarea>
+        </div>
+      </div>
+
+      <!-- Financials & Funding -->
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="startupCosts">Startup Costs</label>
+          <textarea id="startupCosts" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="One-time costs to launch"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="financials">Financial Projections Assumptions</label>
+          <textarea id="financials" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Units sold, price, margin, growth, seasonality"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="funding">Funding Needed & Use of Funds</label>
+          <textarea id="funding" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Amount, instrument, runway, allocation"></textarea>
+        </div>
+      </div>
+
+      <!-- Risks -->
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="risks">Key Risks</label>
+          <textarea id="risks" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Market, operational, financial, regulatory"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="mitigations">Mitigations</label>
+          <textarea id="mitigations" rows="3" class="w-full rounded-2xl border-slate-300 p-3" placeholder="Backups, insurance, contracts, testing, compliance"></textarea>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <button id="generateBtn" class="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 font-semibold text-white shadow hover:bg-blue-800">
+          Generate & Download Prompt (.txt)
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M8 12l4 4m0 0l4-4m-4 4V4"/>
+          </svg>
+        </button>
+
+        <button id="copyBtn" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white shadow hover:bg-slate-800">
+          Copy to Clipboard
+        </button>
+
+        <span id="copiedMsg" class="text-sm text-emerald-700 hidden">Copied!</span>
+      </div>
+
+      <!-- Preview -->
+      <div class="mt-8">
+        <h3 class="text-sm font-semibold text-slate-700 mb-2">Prompt Preview (read-only)</h3>
+        <textarea id="preview" rows="18" class="w-full rounded-2xl border-slate-300 p-4 bg-slate-50" readonly></textarea>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how" class="mt-12">
+      <div class="rounded-3xl bg-white p-6 sm:p-8 ring-1 ring-slate-200 shadow">
+        <h2 class="text-xl font-bold">How it works</h2>
+        <ol class="mt-3 list-decimal list-inside text-slate-700 space-y-1">
+          <li>Fill in any fields you want to include in your plan.</li>
+          <li>Click <span class="font-semibold">Generate & Download</span> to save a .txt file.</li>
+          <li>Paste the prompt into your AI tool to produce a full business plan.</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer class="py-10 text-center text-sm text-slate-500">Build smarter. Launch confidently.</footer>
+  </main>
+
+  <script>
+    // Helper to get value by id
+    const V = id => document.getElementById(id).value.trim();
+
+    function buildPrompt() {
+      const today = new Date().toISOString().split('T')[0];
+
+      const lines = [
+`ROLE: You are a seasoned business-plan analyst and consultant.`,
+`DATE: ${today}`,
+`GOAL: Generate a complete, investor-friendly business plan using the structured inputs below.`,
+`STYLE: Clear headers, bullet-first, concise paragraphs, tables when useful. Flag assumptions where data is missing.`,
+`---`,
+`BUSINESS SNAPSHOT:`,
+`- Name: ${V('bizName') || '(not provided)'}`,
+`- Legal Structure: ${V('legal') || '(not provided)'}`,
+`- Location: ${V('location') || '(not provided)'}`,
+`---`,
+`EXECUTIVE SUMMARY:`,
+`- Mission: ${V('mission') || '(not provided)'}`,
+`- Value Proposition: ${V('valueProp') || '(not provided)'}`,
+`---`,
+`MARKET & CUSTOMERS:`,
+`- Target Segments: ${V('segments') || '(not provided)'}`,
+`- Customer Problem/Need: ${V('problem') || '(not provided)'}`,
+`---`,
+`SOLUTION & OFFER:`,
+`- Products/Services: ${V('offer') || '(not provided)'}`,
+`- Pricing Strategy: ${V('pricing') || '(not provided)'}`,
+`- Sales/Distribution Channels: ${V('channels') || '(not provided)'}`,
+`---`,
+`GO-TO-MARKET:`,
+`- Marketing Plan: ${V('marketing') || '(not provided)'}`,
+`- KPIs: ${V('kpis') || '(not provided)'}`,
+`---`,
+`COMPETITIVE LANDSCAPE:`,
+`- Competitors: ${V('competitors') || '(not provided)'}`,
+`- SWOT (if provided): ${V('swot') || '(not provided)'}`,
+`---`,
+`OPERATIONS & TEAM:`,
+`- Operations: ${V('operations') || '(not provided)'}`,
+`- Team: ${V('team') || '(not provided)'}`,
+`- Milestones (12–18 mo): ${V('milestones') || '(not provided)'}`,
+`---`,
+`FINANCIALS & FUNDING:`,
+`- Startup Costs: ${V('startupCosts') || '(not provided)'}`,
+`- Financial Projections — Assumptions: ${V('financials') || '(not provided)'}`,
+`- Funding Needed & Use of Funds: ${V('funding') || '(not provided)'}`,
+`---`,
+`RISKS & MITIGATIONS:`,
+`- Key Risks: ${V('risks') || '(not provided)'}`,
+`- Mitigations: ${V('mitigations') || '(not provided)'}`,
+`---`,
+`OUTPUT REQUIREMENTS:`,
+`1) Executive Summary (bullet-first).`,
+`2) Problem & Solution overview with a value-prop statement.`,
+`3) Market analysis: segments, demand drivers; include a brief TAM/SAM/SOM estimate with assumptions.`,
+`4) Competitor summary table (name, target, price posture, differentiators).`,
+`5) Go-to-market plan (channels, messaging hooks, initial campaign ideas).`,
+`6) Operating model (suppliers/fulfillment/support) and org chart.`,
+`7) 12–18 month milestone roadmap.`,
+`8) Financials: a simple 24-month projection using our assumptions (revenue, COGS, gross margin, OpEx ranges).`,
+`9) Funding section: amount, instrument options, runway, use of funds.`,
+`10) Risks & mitigations, plus 5 quick validation steps (next 2 weeks).`,
+`FORMAT: Use clear headers, tables for comparisons, and short paragraphs. Cite sources if external data is referenced.`
+      ];
+      return lines.join('\n');
+    }
+
+    // Elements
+    const preview = document.getElementById('preview');
+    const copyBtn = document.getElementById('copyBtn');
+    const copiedMsg = document.getElementById('copiedMsg');
+    const generateBtn = document.getElementById('generateBtn');
+
+    function refreshPreview() { preview.value = buildPrompt(); }
+
+    // Live preview updates
+    [
+      'bizName','legal','location','mission','valueProp','segments','problem','offer','pricing',
+      'channels','marketing','kpis','competitors','swot','operations','team','milestones',
+      'startupCosts','financials','funding','risks','mitigations'
+    ].forEach(id => {
+      document.getElementById(id).addEventListener('input', refreshPreview);
+    });
+    refreshPreview();
+
+    // Copy to clipboard
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(preview.value);
+        copiedMsg.classList.remove('hidden');
+        setTimeout(() => copiedMsg.classList.add('hidden'), 1500);
+      } catch {
+        preview.select();
+        document.execCommand('copy');
+        copiedMsg.classList.remove('hidden');
+        setTimeout(() => copiedMsg.classList.add('hidden'), 1500);
+      }
+    });
+
+    // Download as .txt
+    generateBtn.addEventListener('click', () => {
+      const txt = preview.value || buildPrompt();
+      const blob = new Blob([txt], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'business_plan_prompt.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>

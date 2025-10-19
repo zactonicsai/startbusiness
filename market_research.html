@@ -16,6 +16,44 @@
   </style>
 </head>
 <body class="text-slate-800 antialiased">
+     <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold">SB</span>
+          <span class="font-semibold text-lg">Start Smart</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="/starting_small_business_form.html" class="hover:text-blue-700">First Things First</a>
+          <a href="/market_research.html" class="hover:text-blue-700">Market & Competition</a>
+          <a href="/business_plan.html" class="hover:text-blue-700">Business Plan</a>
+          <a href="/indec.html/#costs" class="hover:text-blue-700">Startup Costs</a>
+          <a href="/index.html/#credit" class="hover:text-blue-700">Business Credit</a>
+          <a href="/index.html/#funding" class="hover:text-blue-700">Funding</a>
+          <a href="/index.html/#buy" class="hover:text-blue-700">Buy/Franchise</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-slate-100" aria-label="Open Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <nav class="mx-auto max-w-7xl px-4 py-3 grid grid-cols-1 gap-2">
+        <a href="#first" class="py-2 hover:text-blue-700">First Things First</a>
+        <a href="#market" class="py-2 hover:text-blue-700">Market & Competition</a>
+        <a href="/business_plan.html" class="py-2 hover:text-blue-700">Business Plan</a>
+        <a href="/index.html/#costs" class="py-2 hover:text-blue-700">Startup Costs</a>
+        <a href="/index.html/#credit" class="py-2 hover:text-blue-700">Business Credit</a>
+        <a href="/index.html/#funding" class="py-2 hover:text-blue-700">Funding</a>
+        <a href="/index.html/#buy" class="py-2 hover:text-blue-700">Buy/Franchise</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- NAV -->
   <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-slate-200">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
