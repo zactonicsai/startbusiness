@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starting Your Small Business — Interactive Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Simple gradient background */
+    body { background: linear-gradient(135deg, #e0f2fe, #f5f3ff); }
+  </style>
+</head>
+<body class="min-h-screen p-6 sm:p-10">
+  <div class="max-w-5xl mx-auto">
+    <header class="bg-blue-700 text-white rounded-2xl shadow-lg p-6 sm:p-8 mb-6">
+      <h1 class="text-2xl sm:text-3xl font-extrabold">Starting Your Small Business — Beginner’s Worksheet</h1>
+      <p class="opacity-90 mt-2">Fill this out to shape your idea into a real plan. Download a text summary when you’re done.</p>
+    </header>
+
+    <form id="bizForm" class="space-y-8">
+      <!-- Intro fields -->
+      <section class="grid sm:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Instructor</label>
+          <input name="instructor" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3" placeholder="Your name"/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Student Name</label>
+          <input name="student" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3" placeholder="Student name"/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Date</label>
+          <input name="date" type="date" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3"/>
+        </div>
+      </section>
+
+      <!-- Part 1 -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 1 — Choosing Your Business Idea</h2>
+        <p class="text-sm text-gray-600 mb-4">Think about what you love, what you’re good at, and what people need.</p>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What I Enjoy Doing</label>
+            <textarea name="enjoy" rows="5" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What I’m Good At</label>
+            <textarea name="goodAt" rows="5" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What People Ask Me For Help With</label>
+            <textarea name="helpWith" rows="5" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+        </div>
+        <div class="mt-4 space-y-2">
+          <p class="text-sm text-gray-700 font-semibold">Prompts</p>
+          <ul class="list-disc list-inside text-sm text-gray-700">
+            <li>What problems do you notice in your community or online that you could help solve?</li>
+            <li>What kind of products or services do you wish existed but don’t?</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Part 2 -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 2 — Type of Business</h2>
+        <p class="text-sm text-gray-600 mb-4">Check all that fit your idea, or select the best match.</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="flex items-start gap-3 p-3 rounded-xl border hover:bg-blue-50">
+            <input type="checkbox" name="types" value="Full-Time Business" class="mt-1">
+            <span><span class="font-semibold">Full-Time Business</span><br><span class="text-sm text-gray-600">Main source of income. (Bakery, cleaning, landscaping)</span></span>
+          </label>
+          <label class="flex items-start gap-3 p-3 rounded-xl border hover:bg-blue-50">
+            <input type="checkbox" name="types" value="Side Hustle" class="mt-1">
+            <span><span class="font-semibold">Side Hustle</span><br><span class="text-sm text-gray-600">Part-time around job or school. (Freelance, photography)</span></span>
+          </label>
+          <label class="flex items-start gap-3 p-3 rounded-xl border hover:bg-blue-50">
+            <input type="checkbox" name="types" value="Craft/Handmade" class="mt-1">
+            <span><span class="font-semibold">Craft/Handmade</span><br><span class="text-sm text-gray-600">Create & sell your own products. (Jewelry, candles, art)</span></span>
+          </label>
+          <label class="flex items-start gap-3 p-3 rounded-xl border hover:bg-blue-50">
+            <input type="checkbox" name="types" value="Online/Digital" class="mt-1">
+            <span><span class="font-semibold">Online/Digital</span><br><span class="text-sm text-gray-600">Sell online. (Etsy, e‑books, YouTube)</span></span>
+          </label>
+          <label class="flex items-start gap-3 p-3 rounded-xl border hover:bg-blue-50">
+            <input type="checkbox" name="types" value="Product-Based" class="mt-1">
+            <span><span class="font-semibold">Product-Based</span><br><span class="text-sm text-gray-600">Physical or digital items. (Soap, shirts, planners)</span></span>
+          </label>
+          <label class="flex items-start gap-3 p-3 rounded-xl border hover:bg-blue-50">
+            <input type="checkbox" name="types" value="Service-Based" class="mt-1">
+            <span><span class="font-semibold">Service-Based</span><br><span class="text-sm text-gray-600">Sell your time or skill. (Tutoring, lawn care, VA)</span></span>
+          </label>
+          <label class="flex items-start gap-3 p-3 rounded-xl border hover:bg-blue-50">
+            <input type="checkbox" name="types" value="Consulting/Coaching" class="mt-1">
+            <span><span class="font-semibold">Consulting/Coaching</span><br><span class="text-sm text-gray-600">Help others with your expertise. (Business coach, fitness)</span></span>
+          </label>
+          <label class="flex items-start gap-3 p-3 rounded-xl border hover:bg-blue-50">
+            <input type="checkbox" name="types" value="App/Tech Startup" class="mt-1">
+            <span><span class="font-semibold">App/Tech Startup</span><br><span class="text-sm text-gray-600">Apps, software, or tech tools. (Scheduling, delivery)</span></span>
+          </label>
+        </div>
+        <div class="mt-4">
+          <label class="block text-sm font-medium text-gray-700">My business idea fits best as a...</label>
+          <input name="bestFit" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="Type here"/>
+        </div>
+      </section>
+
+      <!-- Part 3 -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 3 — Purpose & Audience</h2>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Who is your ideal customer?</label>
+            <textarea name="idealCustomer" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What problem do they have that your business solves?</label>
+            <textarea name="problemSolved" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Why would they choose you instead of someone else?</label>
+            <textarea name="uniqueValue" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 4 -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 4 — Startup Snapshot</h2>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What materials or tools do you need to get started?</label>
+            <textarea name="materials" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">How much money will it take to begin?</label>
+            <input name="budget" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="$"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Where will you sell or market your business? (Online, local, both?)</label>
+            <input name="channels" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="Online, local, both"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Do you plan to start alone or with partners?</label>
+            <input name="team" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="Solo or partners?"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What name or brand ideas do you have?</label>
+            <input name="brand" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="Brand ideas"/>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 5 -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 5 — First 5 Steps to Launch</h2>
+        <div class="overflow-hidden rounded-xl border">
+          <table class="w-full text-left">
+            <thead class="bg-blue-100">
+              <tr>
+                <th class="p-3 w-16">Step</th>
+                <th class="p-3">Task</th>
+                <th class="p-3 w-40">Deadline</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${[1,2,3,4,5].map(i => `
+              <tr class="border-t">
+                <td class="p-3 font-semibold">${i}</td>
+                <td class="p-3"><input name="task${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
+                <td class="p-3"><input type="date" name="deadline${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Reflection -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Reflection</h2>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What excites you most about starting your own business?</label>
+            <textarea name="excites" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What challenges or fears do you have?</label>
+            <textarea name="fears" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">How will you stay motivated when things get tough?</label>
+            <textarea name="motivation" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <button type="button" id="downloadBtn" class="px-5 py-3 bg-blue-700 hover:bg-blue-800 text-white rounded-xl shadow">Download as .txt</button>
+        <span class="text-sm text-gray-600">A plain-text summary of your answers will be created.</span>
+      </div>
+    </form>
+
+    <footer class="mt-10 text-sm text-gray-600">
+      <p>Tip: Validate your idea early — interview potential customers, run a small pilot, or pre-sell a simple version.</p>
+    </footer>
+  </div>
+
+  <script>
+    function collectFormData(form) {
+      const data = new FormData(form);
+      const types = data.getAll('types');
+      let lines = [];
+      lines.push('Starting Your Small Business — Worksheet');
+      lines.push('---------------------------------------');
+      lines.push('Instructor: ' + (data.get('instructor')||''));
+      lines.push('Student: ' + (data.get('student')||''));
+      lines.push('Date: ' + (data.get('date')||''));
+      lines.push('');
+
+      lines.push('[Part 1] Choosing Your Business Idea');
+      lines.push('Enjoy: ' + (data.get('enjoy')||''));
+      lines.push('Good At: ' + (data.get('goodAt')||''));
+      lines.push('Help With: ' + (data.get('helpWith')||''));
+      lines.push('');
+
+      lines.push('[Part 2] Type of Business');
+      lines.push('Checked Types: ' + (types.length ? types.join(', ') : ''));
+      lines.push('Best Fit: ' + (data.get('bestFit')||''));
+      lines.push('');
+
+      lines.push('[Part 3] Purpose & Audience');
+      lines.push('Ideal Customer: ' + (data.get('idealCustomer')||''));
+      lines.push('Problem Solved: ' + (data.get('problemSolved')||''));
+      lines.push('Unique Value: ' + (data.get('uniqueValue')||''));
+      lines.push('');
+
+      lines.push('[Part 4] Startup Snapshot');
+      lines.push('Materials/Tools: ' + (data.get('materials')||''));
+      lines.push('Budget: ' + (data.get('budget')||''));
+      lines.push('Channels: ' + (data.get('channels')||''));
+      lines.push('Team: ' + (data.get('team')||''));
+      lines.push('Brand Ideas: ' + (data.get('brand')||''));
+      lines.push('');
+
+      lines.push('[Part 5] First 5 Steps');
+      for (let i=1; i<=5; i++) {
+        lines.push('Step ' + i + ' Task: ' + (data.get('task'+i) || '') + ' | Deadline: ' + (data.get('deadline'+i) || ''));
+      }
+      lines.push('');
+
+      lines.push('[Reflection]');
+      lines.push('Excites: ' + (data.get('excites')||''));
+      lines.push('Fears: ' + (data.get('fears')||''));
+      lines.push('Motivation: ' + (data.get('motivation')||''));
+
+      return lines.join('\n');
+    }
+
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const form = document.getElementById('bizForm');
+      const txt = collectFormData(form);
+      const blob = new Blob([txt], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'business_worksheet_answers.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
