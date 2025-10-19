@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buy a Business or Franchise — Interactive Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: linear-gradient(135deg, #e0f2fe, #f5f3ff); }
+  </style>
+</head>
+<body class="min-h-screen p-6 sm:p-10">
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold">SB</span>
+          <span class="font-semibold text-lg">Start Smart</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="#" class="hover:text-blue-700">First Things First</a>
+          <a href="#" class="hover:text-blue-700">Market & Competition</a>
+          <a href="#" class="hover:text-blue-700">Business Plan</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-5xl mx-auto">
+    <header class="bg-blue-700 text-white rounded-2xl shadow-lg p-6 sm:p-8 mb-6">
+      <h1 class="text-2xl sm:text-3xl font-extrabold">Buy a Business or Franchise — Decision Worksheet</h1>
+      <p class="opacity-90 mt-2">Starting from scratch can be challenging. Franchising or buying an existing business can simplify the initial planning process. Use this form to explore your options.</p>
+    </header>
+
+    <form id="buyBizForm" class="space-y-8">
+      <!-- Intro fields -->
+      <section class="grid sm:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Instructor</label>
+          <input name="instructor" value="Zach Lewis" disabled class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3" placeholder="Your name"/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Student Name</label>
+          <input name="student" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3" placeholder="Student name"/>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Date</label>
+          <input name="date" type="date" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3"/>
+        </div>
+      </section>
+
+      <!-- Part 1: Your Interest -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 1 — What Interests You More?</h2>
+        <p class="text-sm text-gray-600 mb-4">Choose the option that best fits your goals.</p>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-4 rounded-xl border hover:bg-blue-50 cursor-pointer">
+            <input type="radio" name="interest" value="Buy Existing Business" class="mt-1">
+            <span>
+              <span class="font-semibold block">Buy an Existing Business</span>
+              <span class="text-sm text-gray-600">Purchase a business that's already operating with customers, revenue, and systems in place.</span>
+            </span>
+          </label>
+          <label class="flex items-start gap-3 p-4 rounded-xl border hover:bg-blue-50 cursor-pointer">
+            <input type="radio" name="interest" value="Buy Franchise" class="mt-1">
+            <span>
+              <span class="font-semibold block">Buy a Franchise</span>
+              <span class="text-sm text-gray-600">Join a proven brand with training, support, and established business systems.</span>
+            </span>
+          </label>
+          <label class="flex items-start gap-3 p-4 rounded-xl border hover:bg-blue-50 cursor-pointer">
+            <input type="radio" name="interest" value="Both" class="mt-1">
+            <span>
+              <span class="font-semibold block">Exploring Both Options</span>
+              <span class="text-sm text-gray-600">I want to compare both paths before deciding.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Part 2: Franchise Types -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 2 — Franchise Types & Options</h2>
+        <p class="text-sm text-gray-600 mb-4">Explore different franchise categories and investment levels.</p>
+        
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Franchise Industry Type</label>
+            <select name="franchiseType" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3">
+              <option value="">Select an industry...</option>
+              <option value="Food & Beverage">Food & Beverage (Fast food, coffee, restaurants)</option>
+              <option value="Health & Fitness">Health & Fitness (Gyms, studios, wellness)</option>
+              <option value="Home Services">Home Services (Cleaning, lawn care, repairs)</option>
+              <option value="Automotive">Automotive (Car wash, oil change, detailing)</option>
+              <option value="Education & Tutoring">Education & Tutoring (Learning centers, test prep)</option>
+              <option value="Senior Care">Senior Care (Home health, assisted living)</option>
+              <option value="Pet Services">Pet Services (Grooming, daycare, training)</option>
+              <option value="Retail">Retail (Convenience stores, specialty shops)</option>
+              <option value="Business Services">Business Services (Printing, shipping, consulting)</option>
+              <option value="Real Estate">Real Estate (Brokerage, property management)</option>
+              <option value="Children's Services">Children's Services (Daycare, enrichment programs)</option>
+              <option value="Technology">Technology (IT support, mobile repair)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Low-Cost Franchise Options (Under $50K)</label>
+            <select name="lowCostFranchise" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3">
+              <option value="">Select a low-cost franchise...</option>
+              <option value="Jan-Pro (Cleaning) - $4K-$50K">Jan-Pro (Cleaning) - $4K-$50K</option>
+              <option value="Cruise Planners (Travel) - $2K-$23K">Cruise Planners (Travel) - $2K-$23K</option>
+              <option value="Dream Vacations (Travel) - $3K-$22K">Dream Vacations (Travel) - $3K-$22K</option>
+              <option value="Jazzercise (Fitness) - $4K-$40K">Jazzercise (Fitness) - $4K-$40K</option>
+              <option value="SuperGreen Solutions (Cleaning) - $5K-$50K">SuperGreen Solutions (Cleaning) - $5K-$50K</option>
+              <option value="Stratus Building Solutions (Cleaning) - $5K-$75K">Stratus Building Solutions (Cleaning) - $5K-$75K</option>
+              <option value="Junk King (Junk Removal) - $80K-$150K">Junk King (Junk Removal) - $80K-$150K</option>
+              <option value="Home Instead (Senior Care) - $125K-$150K">Home Instead (Senior Care) - $125K-$150K</option>
+              <option value="Snap-on Tools (Automotive) - $20K-$500K">Snap-on Tools (Automotive) - $20K-$500K</option>
+              <option value="Caring Senior Service (Home Care) - $75K-$125K">Caring Senior Service (Home Care) - $75K-$125K</option>
+              <option value="Vanguard Cleaning (Cleaning) - $9K-$40K">Vanguard Cleaning (Cleaning) - $9K-$40K</option>
+              <option value="Mobile Auto Detailing - $10K-$30K">Mobile Auto Detailing - $10K-$30K</option>
+              <option value="Tumble Tots (Children's Fitness) - $30K-$50K">Tumble Tots (Children's Fitness) - $30K-$50K</option>
+              <option value="Expense Reduction Analysts (Consulting) - $75K-$95K">Expense Reduction Analysts (Consulting) - $75K-$95K</option>
+              <option value="Image One (Facilities Services) - $50K-$100K">Image One (Facilities Services) - $50K-$100K</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Popular Mid-Range Franchises ($50K-$250K)</label>
+            <select name="midRangeFranchise" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3">
+              <option value="">Select a mid-range franchise...</option>
+              <option value="Dunkin' - $95K-$1.6M">Dunkin' - $95K-$1.6M</option>
+              <option value="The UPS Store - $178K-$403K">The UPS Store - $178K-$403K</option>
+              <option value="Great Clips - $137K-$258K">Great Clips - $137K-$258K</option>
+              <option value="Jersey Mike's Subs - $169K-$804K">Jersey Mike's Subs - $169K-$804K</option>
+              <option value="Anytime Fitness - $100K-$700K">Anytime Fitness - $100K-$700K</option>
+              <option value="Subway - $115K-$263K">Subway - $115K-$263K</option>
+              <option value="Papa John's - $130K-$844K">Papa John's - $130K-$844K</option>
+              <option value="RE/MAX (Real Estate) - $40K-$250K">RE/MAX (Real Estate) - $40K-$250K</option>
+              <option value="HomeVestors (Real Estate) - $150K-$500K">HomeVestors (Real Estate) - $150K-$500K</option>
+              <option value="Massage Envy - $357K-$662K">Massage Envy - $357K-$662K</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 3: Your Budget & Resources -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 3 — Your Budget & Resources</h2>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">How much can you invest? (Total capital available)</label>
+            <input name="investmentAmount" type="text" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="$50,000"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Do you have access to financing or loans?</label>
+            <select name="financing" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3">
+              <option value="">Select one...</option>
+              <option value="Yes - Pre-approved">Yes - Pre-approved</option>
+              <option value="Yes - Will apply">Yes - Will apply</option>
+              <option value="Maybe - Exploring options">Maybe - Exploring options</option>
+              <option value="No - Cash only">No - Cash only</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">How many hours per week can you dedicate to this business?</label>
+            <input name="hoursPerWeek" type="text" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="40 hours"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Do you plan to manage it yourself or hire a manager?</label>
+            <select name="management" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3">
+              <option value="">Select one...</option>
+              <option value="Owner-Operator">Owner-Operator (I'll manage it myself)</option>
+              <option value="Semi-Absentee">Semi-Absentee (Part-time involvement)</option>
+              <option value="Absentee Owner">Absentee Owner (Hire manager)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 4: Due Diligence for Existing Business -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 4 — Due Diligence Questions (For Buying Existing Business)</h2>
+        <p class="text-sm text-gray-600 mb-4">Important questions to ask before purchasing an existing business.</p>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What industry or type of existing business interests you?</label>
+            <textarea name="existingBizType" rows="2" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="Restaurant, retail store, service business, etc."></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Have you reviewed the business's financial statements?</label>
+            <select name="financialsReviewed" class="mt-1 w-full rounded-xl border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-3">
+              <option value="">Select one...</option>
+              <option value="Yes - Reviewed with accountant">Yes - Reviewed with accountant</option>
+              <option value="Yes - Reviewed myself">Yes - Reviewed myself</option>
+              <option value="Not yet">Not yet</option>
+              <option value="N/A - Still exploring">N/A - Still exploring</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Key concerns about buying an existing business:</label>
+            <textarea name="concerns" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="Declining sales, outdated systems, lease terms, competition, etc."></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What makes this business attractive to you?</label>
+            <textarea name="attractive" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="Established customer base, location, growth potential, etc."></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 5: Franchise vs Existing Business -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 5 — Comparing Your Options</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Franchise Pros (for you)</label>
+            <textarea name="franchisePros" rows="5" class="w-full rounded-xl border-gray-300 p-3" placeholder="Proven system, training, brand recognition..."></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Franchise Cons (for you)</label>
+            <textarea name="franchiseCons" rows="5" class="w-full rounded-xl border-gray-300 p-3" placeholder="Ongoing royalties, less freedom, strict rules..."></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Existing Business Pros (for you)</label>
+            <textarea name="existingPros" rows="5" class="w-full rounded-xl border-gray-300 p-3" placeholder="Immediate cash flow, existing customers, established location..."></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Existing Business Cons (for you)</label>
+            <textarea name="existingCons" rows="5" class="w-full rounded-xl border-gray-300 p-3" placeholder="Higher risk, outdated systems, unknown problems..."></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Part 6: Action Steps -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Part 6 — Your Next 5 Action Steps</h2>
+        <div class="overflow-hidden rounded-xl border">
+          <table class="w-full text-left">
+            <thead class="bg-blue-100">
+              <tr>
+                <th class="p-3 w-16">Step</th>
+                <th class="p-3">Action Item</th>
+                <th class="p-3 w-40">Deadline</th>
+              </tr>
+            </thead>
+            <tbody id="actionTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Reflection -->
+      <section class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xl font-bold text-blue-800">Final Reflection</h2>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Based on this worksheet, which path are you leaning toward?</label>
+            <textarea name="finalChoice" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3" placeholder="Franchise, existing business, or still deciding..."></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">What's your biggest question or concern right now?</label>
+            <textarea name="biggestQuestion" rows="3" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Who will you consult for advice? (Accountant, lawyer, business broker, mentor)</label>
+            <textarea name="advisors" rows="2" class="mt-1 w-full rounded-xl border-gray-300 p-3"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <button type="button" id="downloadBtn" class="px-5 py-3 bg-blue-700 hover:bg-blue-800 text-white rounded-xl shadow">Download as .txt</button>
+        <span class="text-sm text-gray-600">A plain-text summary of your answers will be created.</span>
+      </div>
+    </form>
+
+    <footer class="mt-10 text-sm text-gray-600">
+      <p><strong>Pro Tip:</strong> Always conduct thorough due diligence. For franchises, request the Franchise Disclosure Document (FDD) and speak with current franchisees. For existing businesses, hire a business broker and accountant to review financials.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Generate action table rows
+    const tbody = document.getElementById('actionTableBody');
+    const rows = [1,2,3,4,5].map(i => `
+      <tr class="border-t">
+        <td class="p-3 font-semibold">${i}</td>
+        <td class="p-3"><input name="action${i}" class="w-full rounded-lg border-gray-300 p-2" placeholder="e.g., Request FDD, visit location, review financials..."/></td>
+        <td class="p-3"><input type="date" name="actionDeadline${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
+      </tr>
+    `).join('');
+    tbody.innerHTML = rows;
+
+    function collectFormData(form) {
+      const data = new FormData(form);
+      let lines = [];
+      
+      lines.push('I need comprehensive guidance on buying a business or franchise. Here is my detailed profile:');
+      lines.push('');
+      lines.push('=== STUDENT INFORMATION ===');
+      lines.push('Student Name: ' + (data.get('student') || '[Not provided]'));
+      lines.push('Date: ' + (data.get('date') || '[Not provided]'));
+      lines.push('Instructor: ' + (data.get('instructor') || 'Zach Lewis'));
+      lines.push('');
+      
+      lines.push('=== MY BUSINESS ACQUISITION INTEREST ===');
+      const interest = data.get('interest') || '[Not specified]';
+      lines.push('I am interested in: ' + interest);
+      lines.push('');
+
+      lines.push('=== INDUSTRY & FRANCHISE PREFERENCES ===');
+      const franchiseType = data.get('franchiseType') || '[No preference specified]';
+      const lowCost = data.get('lowCostFranchise') || '[None selected]';
+      const midRange = data.get('midRangeFranchise') || '[None selected]';
+      lines.push('Preferred franchise industry: ' + franchiseType);
+      lines.push('Low-cost franchise interest: ' + lowCost);
+      lines.push('Mid-range franchise interest: ' + midRange);
+      lines.push('');
+
+      lines.push('=== MY FINANCIAL SITUATION ===');
+      lines.push('Total investment capital available: ' + (data.get('investmentAmount') || '[Not specified]'));
+      lines.push('Financing/loan access: ' + (data.get('financing') || '[Not specified]'));
+      lines.push('');
+
+      lines.push('=== TIME & MANAGEMENT COMMITMENT ===');
+      lines.push('Hours per week I can dedicate: ' + (data.get('hoursPerWeek') || '[Not specified]'));
+      lines.push('Management preference: ' + (data.get('management') || '[Not specified]'));
+      lines.push('');
+
+      lines.push('=== EXISTING BUSINESS CONSIDERATIONS ===');
+      const bizType = data.get('existingBizType') || '[Not specified]';
+      const financials = data.get('financialsReviewed') || '[Not yet reviewed]';
+      const concerns = data.get('concerns') || '[None listed]';
+      const attractive = data.get('attractive') || '[Not specified]';
+      lines.push('Type of existing business that interests me: ' + bizType);
+      lines.push('Financial statement review status: ' + financials);
+      lines.push('My key concerns about buying existing business: ' + concerns);
+      lines.push('What attracts me to existing business option: ' + attractive);
+      lines.push('');
+
+      lines.push('=== MY ANALYSIS OF BOTH OPTIONS ===');
+      lines.push('Franchise advantages I see: ' + (data.get('franchisePros') || '[Not listed]'));
+      lines.push('Franchise disadvantages I see: ' + (data.get('franchiseCons') || '[Not listed]'));
+      lines.push('Existing business advantages I see: ' + (data.get('existingPros') || '[Not listed]'));
+      lines.push('Existing business disadvantages I see: ' + (data.get('existingCons') || '[Not listed]'));
+      lines.push('');
+
+      lines.push('=== MY PLANNED ACTION STEPS ===');
+      let hasActions = false;
+      for (let i=1; i<=5; i++) {
+        const action = data.get('action'+i);
+        const deadline = data.get('actionDeadline'+i);
+        if (action || deadline) {
+          hasActions = true;
+          lines.push('Step ' + i + ': ' + (action || '[Not specified]') + ' (Deadline: ' + (deadline || '[No deadline]') + ')');
+        }
+      }
+      if (!hasActions) {
+        lines.push('[No action steps specified yet]');
+      }
+      lines.push('');
+
+      lines.push('=== MY CURRENT DECISION STATUS ===');
+      lines.push('Current preference: ' + (data.get('finalChoice') || '[Still undecided]'));
+      lines.push('Biggest question or concern: ' + (data.get('biggestQuestion') || '[Not specified]'));
+      lines.push('Advisors I plan to consult: ' + (data.get('advisors') || '[Not identified yet]'));
+      lines.push('');
+      lines.push('=== REQUEST FOR AI ASSISTANCE ===');
+      lines.push('Based on the above information, please provide:');
+      lines.push('1. A personalized recommendation on whether I should pursue a franchise or existing business purchase');
+      lines.push('2. Specific franchise or business opportunities that match my budget and interests');
+      lines.push('3. A detailed due diligence checklist for my situation');
+      lines.push('4. Financing options and strategies I should explore');
+      lines.push('5. Key risks and how to mitigate them');
+      lines.push('6. A realistic timeline with actionable next steps');
+      lines.push('7. Questions I should ask franchisors, current owners, or business brokers');
+      lines.push('8. Red flags to watch out for in my evaluation process');
+
+      return lines.join('\n');
+    }
+
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const form = document.getElementById('buyBizForm');
+      const txt = collectFormData(form);
+      const blob = new Blob([txt], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'buy_business_franchise_worksheet.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
