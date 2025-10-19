@@ -154,24 +154,31 @@
       <!-- Part 5 -->
       <section class="bg-white rounded-2xl shadow p-6">
         <h2 class="text-xl font-bold text-blue-800">Part 5 — First 5 Steps to Launch</h2>
-        <div class="overflow-hidden rounded-xl border">
-          <table class="w-full text-left">
-            <thead class="bg-blue-100">
-              <tr>
-                <th class="p-3 w-16">Step</th>
-                <th class="p-3">Task</th>
-                <th class="p-3 w-40">Deadline</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${[1,2,3,4,5].map(i => `
-              <tr class="border-t">
-                <td class="p-3 font-semibold">${i}</td>
-                <td class="p-3"><input name="task${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
-                <td class="p-3"><input type="date" name="deadline${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
-              </tr>`).join('')}
-            </tbody>
-          </table>
+        <div class="overflow-hidden rounded-xl border"><table class="w-full text-left" id="taskTable">
+  <thead class="bg-blue-100">
+    <tr>
+      <th class="p-3 w-16">Step</th>
+      <th class="p-3">Task</th>
+      <th class="p-3 w-40">Deadline</th>
+    </tr>
+  </thead>
+  <tbody id="taskTableBody">
+    <!-- Rows will be inserted here by JavaScript -->
+  </tbody>
+</table>
+
+<script>
+  // Generate the table rows dynamically
+  const tbody = document.getElementById('taskTableBody');
+  const rows = [1,2,3,4,5].map(i => `
+    <tr class="border-t">
+      <td class="p-3 font-semibold">${i}</td>
+      <td class="p-3"><input name="task${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
+      <td class="p-3"><input type="date" name="deadline${i}" class="w-full rounded-lg border-gray-300 p-2"/></td>
+    </tr>
+  `).join('');
+  tbody.innerHTML = rows;
+</script>
         </div>
       </section>
 

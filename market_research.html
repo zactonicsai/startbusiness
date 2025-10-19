@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Market Research Prompt Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(900px 500px at 10% 0%, #e0f2fe 0%, transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, #f5f3ff 0%, transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased">
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600 text-white font-bold">MR</span>
+        <span class="font-semibold">Market Research Prompt</span>
+      </div>
+      <a href="#about" class="text-sm font-medium text-blue-700 hover:underline">What is Market Research & Competitive Analysis?</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
+    <!-- HERO -->
+    <section class="mb-8">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-fuchsia-600 p-1 shadow-xl">
+        <div class="rounded-3xl bg-white p-6 sm:p-8">
+          <div class="flex flex-col md:flex-row gap-6 md:items-center">
+            <div class="md:flex-1">
+              <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                Build an AI Prompt for <span class="text-blue-700">Market Research</span> & <span class="text-indigo-700">Competitive Analysis</span>
+              </h1>
+              <p class="mt-3 text-slate-600">
+                Enter a short description of your business. We’ll craft a detailed research prompt for your AI tool and download it as a text file.
+              </p>
+            </div>
+            <div class="md:w-64">
+              <div class="rounded-2xl bg-slate-900 text-white p-5 shadow-lg">
+                <p class="text-sm opacity-80">Outputs include:</p>
+                <ul class="mt-2 text-sm space-y-1">
+                  <li>• Customer segments</li>
+                  <li>• Pain points & jobs-to-be-done</li>
+                  <li>• Competitor list & SWOT</li>
+                  <li>• Positioning ideas</li>
+                  <li>• Channel & pricing hints</li>
+                  <li>• Risks & trends</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="bg-white rounded-3xl shadow ring-1 ring-slate-200 p-6 sm:p-8">
+      <h2 class="text-xl font-bold text-blue-800">Describe your business</h2>
+      <p class="text-sm text-slate-600 mb-4">One or two sentences is enough. Mention what you sell, who it’s for, and where.</p>
+
+      <label class="block text-sm font-medium text-slate-700 mb-2" for="bizDesc">Short description</label>
+      <textarea id="bizDesc" rows="5" class="w-full rounded-2xl border-slate-300 p-4 focus:ring-2 focus:ring-blue-500" placeholder="Example: A mobile car detailing service in Montgomery, AL focused on busy parents and rideshare drivers; eco-friendly waterless wash, monthly subscriptions."></textarea>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="geo">Primary location (optional)</label>
+          <input id="geo" class="w-full rounded-xl border-slate-300 p-3" placeholder="City, State or Region" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1" for="keywords">Keywords (optional)</label>
+          <input id="keywords" class="w-full rounded-xl border-slate-300 p-3" placeholder="e.g., eco-friendly, subscription, budget, premium" />
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <button id="generateBtn" class="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 font-semibold text-white shadow hover:bg-blue-800">
+          Generate & Download Prompt (.txt)
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M8 12l4 4m0 0l4-4m-4 4V4"/>
+          </svg>
+        </button>
+
+        <button id="copyBtn" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white shadow hover:bg-slate-800">
+          Copy to Clipboard
+        </button>
+
+        <span id="copiedMsg" class="text-sm text-emerald-700 hidden">Copied!</span>
+      </div>
+
+      <!-- Preview -->
+      <div class="mt-8">
+        <h3 class="text-sm font-semibold text-slate-700 mb-2">Preview (read-only)</h3>
+        <textarea id="preview" rows="14" class="w-full rounded-2xl border-slate-300 p-4 bg-slate-50" readonly></textarea>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mt-12">
+      <div class="rounded-3xl bg-white p-6 sm:p-8 ring-1 ring-slate-200 shadow">
+        <h2 class="text-xl font-bold">What is Market Research & Competitive Analysis?</h2>
+        <p class="mt-3 text-slate-700">
+          <span class="font-semibold">Market research</span> helps you find customers for your business.
+          <span class="font-semibold">Competitive analysis</span> helps you make your business unique.
+          Combine them to find a competitive advantage for your small business.
+        </p>
+        <div class="mt-4 grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-blue-50 p-4">
+            <h3 class="font-semibold text-blue-900">Market Research explores:</h3>
+            <ul class="mt-2 text-sm text-blue-900/80 space-y-1">
+              <li>• Who your customers are (segments, personas)</li>
+              <li>• Their needs, pains, and “jobs-to-be-done”</li>
+              <li>• Market size (TAM, SAM, SOM) and demand</li>
+              <li>• Where customers search and buy (channels)</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-indigo-50 p-4">
+            <h3 class="font-semibold text-indigo-900">Competitive Analysis looks at:</h3>
+            <ul class="mt-2 text-sm text-indigo-900/80 space-y-1">
+              <li>• Direct & indirect competitors</li>
+              <li>• Differentiators, pricing, and positioning</li>
+              <li>• Strengths, weaknesses, opportunities, threats (SWOT)</li>
+              <li>• Gaps you can fill for an advantage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOT -->
+    <footer class="py-10 text-center text-sm text-slate-500">
+      <p>Build smarter: start with research, then execute confidently.</p>
+    </footer>
+  </main>
+
+  <script>
+    function buildPrompt(desc, geo, keywords) {
+      const now = new Date().toISOString().split('T')[0];
+      const k = keywords ? keywords.split(',').map(s => s.trim()).filter(Boolean) : [];
+      return [
+`ROLE: You are a senior market research analyst and strategy consultant.`,
+`DATE: ${now}`,
+`GOAL: Produce actionable market research and competitive analysis for a small business.`,
+`BUSINESS SUMMARY (user input): ${desc || '(not provided)'}${geo ? ' | Location: ' + geo : ''}${k.length ? ' | Keywords: ' + k.join(', ') : ''}`,
+`---`,
+`DELIVERABLES (structured, concise, bullet-first):`,
+`1) CUSTOMER INSIGHTS:`,
+`   - Primary customer segments/personas (demographics, firmographics if B2B).`,
+`   - Top jobs-to-be-done, pains, motivations, purchase triggers.`,
+`   - Where they search/shop (channels, platforms, keywords).`,
+`2) MARKET OVERVIEW:`,
+`   - Plain-English estimate of TAM/SAM/SOM with sources/assumptions.`,
+`   - Demand drivers, seasonality, local factors (${geo || 'specify if relevant'}).`,
+`3) COMPETITORS:`,
+`   - 6–10 direct & indirect competitors (name, URL, short note).`,
+`   - Quick comparison table: target segment, offer, price posture, differentiators.`,
+`4) SWOT & WHITE SPACE:`,
+`   - SWOT for our business concept (based on description).`,
+`   - Unmet needs and gaps we can fill.`,
+`5) POSITIONING & PRICING HYPOTHESES:`,
+`   - 2–3 positioning angles (value proposition statements).`,
+`   - Price ranges or tiers; note budget/premium cues.`,
+`6) CHANNELS & GO-TO-MARKET:`,
+`   - Top acquisition channels (paid/organic/partnerships/local).`,
+`   - Suggested keywords, starter ad copy hooks, and landing page headline ideas.`,
+`7) RISKS & COMPLIANCE:`,
+`   - Key risks (economic, regulatory, operational) and quick mitigations.`,
+`8) NEXT STEPS (LOW-LIFT VALIDATION):`,
+`   - 5-step mini plan to validate demand in 7–14 days (surveys, pre-sell, pilot).`,
+`---`,
+`SEARCH PLAN (the AI should actually run/outline these):`,
+`- Query templates (swap in city/state if local):`,
+`  • "best [category] near me" SERP pattern + map packs`,
+`  • "[category] pricing [city]" "[service] cost"`,
+`  • "top [category] competitors [city/state]"`,
+`  • "market size [category] [region]" "industry report [year]"`,
+`  • "customer pain points [category]" "reviews [competitor]"`,
+`- Include 5–10 likely long-tail keywords for SEO/PPC discovery.`,
+`- Cite sources (links or names) wherever claims are made.`,
+`FORMAT:`,
+`- Use clear section headers, bullets, minimal fluff.`,
+`- If data is uncertain, state assumptions briefly.`,
+`- Keep the output practical and beginner-friendly.`
+].join('\n');
+    }
+
+    const bizDesc = document.getElementById('bizDesc');
+    const geo = document.getElementById('geo');
+    const keywords = document.getElementById('keywords');
+    const preview = document.getElementById('preview');
+    const generateBtn = document.getElementById('generateBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    const copiedMsg = document.getElementById('copiedMsg');
+
+    function refreshPreview() {
+      preview.value = buildPrompt(bizDesc.value.trim(), geo.value.trim(), keywords.value.trim());
+    }
+
+    ['input','change','keyup'].forEach(evt => {
+      bizDesc.addEventListener(evt, refreshPreview);
+      geo.addEventListener(evt, refreshPreview);
+      keywords.addEventListener(evt, refreshPreview);
+    });
+    // Initialize
+    refreshPreview();
+
+    generateBtn.addEventListener('click', () => {
+      const txt = preview.value || buildPrompt(bizDesc.value.trim(), geo.value.trim(), keywords.value.trim());
+      const blob = new Blob([txt], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'ai_market_research_prompt.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    copyBtn.addEventListener('click', async () => {
+      const txt = preview.value || buildPrompt(bizDesc.value.trim(), geo.value.trim(), keywords.value.trim());
+      try {
+        await navigator.clipboard.writeText(txt);
+        copiedMsg.classList.remove('hidden');
+        setTimeout(() => copiedMsg.classList.add('hidden'), 1500);
+      } catch (e) {
+        // Fallback if clipboard fails
+        preview.select();
+        document.execCommand('copy');
+        copiedMsg.classList.remove('hidden');
+        setTimeout(() => copiedMsg.classList.add('hidden'), 1500);
+      }
+    });
+  </script>
+</body>
+</html>
